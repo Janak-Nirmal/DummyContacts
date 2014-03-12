@@ -25,7 +25,7 @@ Download project and install.
 
 ## Contact
 
-- [GitHub](http://github.com/Jennis)
+- [GitHub](http://github.com/Janak-Nirmal)
 
 Let me know if you're using or enjoying this product by just starring or forking.
 
