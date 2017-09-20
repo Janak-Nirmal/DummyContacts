@@ -91,7 +91,7 @@
             CFRelease(person);
         }
         
-		countAdded += CFArrayGetCount(vCardPeople);
+        countAdded += CFArrayGetCount(vCardPeople);
         CFRelease(vCardPeople);
         CFRelease(defaultSource);
     }
