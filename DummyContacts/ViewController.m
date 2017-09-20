@@ -71,6 +71,7 @@
         accessGranted = YES;
     }
     
+    long countAdded = 0;
     if(accessGranted)
     {
         NSString *filePath = [[NSBundle mainBundle] pathForResource:@"DummyVCard" ofType:@"vcf"];
@@ -90,12 +91,13 @@
             CFRelease(person);
         }
         
+        countAdded += CFArrayGetCount(vCardPeople);
         CFRelease(vCardPeople);
         CFRelease(defaultSource);
     }
     
-    
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"100 contacts added successfully." delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+    NSString *msg = [NSString stringWithFormat:@"%ld contacts added successfully.", countAdded];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:msg delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
     [alertView show];
     [alertView release];
     
